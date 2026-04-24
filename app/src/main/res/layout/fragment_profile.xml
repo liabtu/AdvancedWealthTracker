@@ -2,18 +2,109 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="24dp">
 
-    <TextView
-        android:id="@+id/lgli_tv_profile_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ლია გელაშვილი\n24.10.2004\nK = 0.5"
-        android:textSize="18sp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lgli_profile_cv_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/lgli_profile_iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/lgli_profile_tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Edit"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lgli_profile_cv_image" />
+
+    <TextView
+        android:id="@+id/lgli_label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="მომხმარებლის სახელი"
+        android:textColor="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lgli_profile_tv_edit" />
+
+    <TextView
+        android:id="@+id/lgli_profile_tv_name_value"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/lgli_rounded_edittext"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="Lia Gelashvili"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/lgli_label_name" />
+
+    <TextView
+        android:id="@+id/lgli_label_k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="K კოეფიციენტი"
+        android:textColor="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lgli_profile_tv_name_value" />
+
+    <TextView
+        android:id="@+id/lgli_profile_tv_k_value"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/lgli_rounded_edittext"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="K = 0.5"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/lgli_label_k" />
+
+    <TextView
+        android:id="@+id/lgli_label_formula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="დაბადების თარღი / ფორმულა"
+        android:textColor="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lgli_profile_tv_k_value" />
+
+    <TextView
+        android:id="@+id/lgli_profile_tv_formula_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/lgli_rounded_edittext"
+        android:gravity="center_vertical"
+        android:minHeight="56dp"
+        android:padding="16dp"
+        android:text="24-10-2004\nK = (3 + 9) / 24 = 0.5"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/lgli_label_formula" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
